@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="comcesar1287.github.www.saudecard.view.SplashScreenActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/loading_background"/>
+
+    <ImageView
+        android:id="@+id/loading_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/loading_logo_saude_card"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/loading_bem_vindo"
+        android:layout_above="@+id/loading_logo"
+        android:layout_alignLeft="@+id/loading_logo"
+        android:layout_alignStart="@+id/loading_logo"
+        android:layout_marginBottom="5dp"/>
+</RelativeLayout>
