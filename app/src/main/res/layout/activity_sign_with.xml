@@ -1,9 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="comcesar1287.github.www.saudecard.view.SignWithActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/sign_with_0006_bg"/>
+
+    <ImageView
+        android:id="@+id/sign_with_or"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sign_with_0000_ou"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+    <ImageButton
+        android:id="@+id/sign_with_create_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sign_with_0002_criar_button"
+        android:layout_above="@+id/sign_with_or"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"/>
+
+    <ImageButton
+        android:id="@+id/sign_with_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sign_with_0001_login_button"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/sign_with_create_account"
+        android:layout_marginBottom="15dp"/>
+
+    <ImageButton
+        android:id="@+id/sign_with_facebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sign_with_0003_facebook_button"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/sign_with_or"
+        android:layout_marginTop="15dp"/>
+
+    <ImageButton
+        android:id="@+id/sign_with_google"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sign_with_0005_google_button"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/sign_with_facebook"
+        android:layout_marginTop="15dp"/>
+</RelativeLayout>
