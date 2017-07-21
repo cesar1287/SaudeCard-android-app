@@ -25,7 +25,7 @@
         android:background="@drawable/new_user_0009_bg"/>
 
     <EditText
-        android:id="@+id/etEmail"
+        android:id="@+id/sign_up_etEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/sign_up_separator"
@@ -40,10 +40,10 @@
         android:layout_marginEnd="90sp"/>
 
     <EditText
-        android:id="@+id/etName"
+        android:id="@+id/sign_up_etName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/etEmail"
+        android:layout_above="@+id/sign_up_etEmail"
         android:layout_centerHorizontal="true"
         android:background="@drawable/button_border"
         android:padding="5dp"
@@ -56,10 +56,10 @@
         android:layout_marginBottom="20dp"/>
 
     <EditText
-        android:id="@+id/etCPF"
+        android:id="@+id/sign_up_etCPF"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/etEmail"
+        android:layout_below="@+id/sign_up_etEmail"
         android:layout_centerHorizontal="true"
         android:background="@drawable/button_border"
         android:padding="5dp"
@@ -72,10 +72,10 @@
         android:layout_marginTop="20dp"/>
 
     <EditText
-        android:id="@+id/etPassword"
+        android:id="@+id/sign_up_etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/etCPF"
+        android:layout_below="@id/sign_up_etCPF"
         android:layout_centerHorizontal="true"
         android:background="@drawable/button_border"
         android:padding="5dp"
@@ -88,11 +88,11 @@
         android:layout_marginTop="20dp"/>
 
     <ImageButton
-        android:id="@+id/btCreateUser"
+        android:id="@+id/sign_up_btCreateUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/new_user_0008_criar_button"
-        android:layout_below="@+id/etPassword"
+        android:layout_below="@+id/sign_up_etPassword"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"/>
 
