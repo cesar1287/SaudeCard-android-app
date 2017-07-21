@@ -78,8 +78,6 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
         switch(id){
             case R.id.sign_up_btCreateUser:
-                dialog = ProgressDialog.show(SignUpActivity.this,"",
-                        SignUpActivity.this.getResources().getString(R.string.creating_user), true, false);
                 name = etName.getText().toString();
                 email = etEmail.getText().toString();
                 cpf = etCPF.getText().toString();
@@ -91,7 +89,8 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
     public void createUser(){
         if(!Utility.verifyEmptyField(name, email, password, cpf)) {
-
+            dialog = ProgressDialog.show(SignUpActivity.this,"",
+                    SignUpActivity.this.getResources().getString(R.string.creating_user), true, false);
             cpf = cpf.replaceAll("[.]", "").replaceAll("[-]","");
             if(Utility.isValidCPF(cpf)) {
                 mAuth.createUserWithEmailAndPassword(email, password)

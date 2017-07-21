@@ -15,16 +15,17 @@
     <string name="error_password_too_small">Sua senha precisa ter pelo menos 6 caracteres, digite novamente.</string>
     <string name="error_all_fields_required">Todos os campos são obrigatórios, tente novamente.</string>
     <string name="error_create_new_account">Algo deu errado ao tentar criar a conta, tente novamente.</string>
+    <string name="error_user_password_incorrect">Usuário e/ou senha incorreto(s).</string>
 
     <string name="user_created_successfully">Usuário criado com sucesso.</string>
 
     <string name="processing_login">Processando login, por favor aguarde…</string>
     <string name="creating_user">Criando o usuário, por favor aguarde…</string>
 
-    <string name="new_user_hint_name">Nome</string>
-    <string name="new_user_hint_email">Email</string>
-    <string name="new_user_hint_cpf">CPF</string>
-    <string name="new_user_hint_password">Senha</string>
+    <string name="hint_name">Nome</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_cpf">CPF</string>
+    <string name="hint_password">Senha</string>
 
     <string name="cpf_mask">###.###.###-##</string>
     <string name="error_invalid_cpf">CPF inválido, verifique e insira novamente por favor</string>
