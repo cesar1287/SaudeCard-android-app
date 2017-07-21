@@ -26,7 +26,9 @@
 
         <activity android:name=".view.SignInActivity" />
 
-        <activity android:name=".view.SignUpActivity" />
+        <activity
+            android:name=".view.SignUpActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
 
         <activity
             android:name=".view.SignWithActivity"

@@ -12,4 +12,8 @@
     <string name="error_unknown_error">Erro desconhecido, tente novamente e contate o administrador.</string>
     <string name="error_signin">Algo deu errado ao fazer login, tente novamente.</string>
     <string name="processing_login">Processando login, por favor aguarde…</string>
+    <string name="new_user_hint_name">Nome</string>
+    <string name="new_user_hint_email">Email</string>
+    <string name="new_user_hint_cpf">CPF</string>
+    <string name="new_user_hint_password">Senha</string>
 </resources>
