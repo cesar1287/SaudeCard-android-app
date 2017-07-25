@@ -24,7 +24,7 @@
         android:layout_height="match_parent"
         android:background="@drawable/new_user_0009_bg"/>
 
-    <EditText
+    <comcesar1287.github.www.saudecard.controller.custom_widgets.MyCustomEditText
         android:id="@+id/sign_up_etEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -39,7 +39,7 @@
         android:layout_marginRight="90dp"
         android:layout_marginEnd="90dp"/>
 
-    <EditText
+    <comcesar1287.github.www.saudecard.controller.custom_widgets.MyCustomEditText
         android:id="@+id/sign_up_etName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -55,7 +55,7 @@
         android:layout_marginEnd="90dp"
         android:layout_marginBottom="20dp"/>
 
-    <EditText
+    <comcesar1287.github.www.saudecard.controller.custom_widgets.MyCustomEditText
         android:id="@+id/sign_up_etCPF"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -71,7 +71,7 @@
         android:layout_marginEnd="90dp"
         android:layout_marginTop="20dp"/>
 
-    <EditText
+    <comcesar1287.github.www.saudecard.controller.custom_widgets.MyCustomEditText
         android:id="@+id/sign_up_etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

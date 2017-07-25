@@ -10,7 +10,7 @@
         android:layout_height="match_parent"
         android:background="@drawable/login_0005_bg"/>
 
-    <EditText
+    <comcesar1287.github.www.saudecard.controller.custom_widgets.MyCustomEditText
         android:id="@+id/sign_in_etEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,7 +25,7 @@
         android:textColor="@color/white"
         android:inputType="textEmailAddress" />
     
-    <EditText
+    <comcesar1287.github.www.saudecard.controller.custom_widgets.MyCustomEditText
         android:id="@+id/sign_in_etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
