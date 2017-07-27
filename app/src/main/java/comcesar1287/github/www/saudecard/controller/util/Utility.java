@@ -6,6 +6,8 @@ import android.widget.EditText;
 
 public class Utility {
 
+    public static final String URI_PACKAGE = "android.resource://comcesar1287.github.www.saudecard/";
+
     public static String STATE = "Estado";
     public static String CITY = "Cidade";
 

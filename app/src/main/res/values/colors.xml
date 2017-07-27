@@ -3,6 +3,7 @@
     <color name="colorPrimary">#266bab</color>
     <color name="colorPrimaryDark">#084186</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="colorSubActionBar">#225a9a</color>
 
     <color name="white">#FFF</color>
 </resources>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--dimens.xml-->
 <resources>
-    <dimen name="default_elevation">8dp</dimen>
+    <dimen name="default_elevation">0dp</dimen>
     <dimen name="menu_toolbar_height">80dp</dimen>
 </resources>

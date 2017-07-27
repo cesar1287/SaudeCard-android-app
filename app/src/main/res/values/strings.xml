@@ -29,4 +29,5 @@
 
     <string name="cpf_mask">###.###.###-##</string>
     <string name="error_invalid_cpf">CPF inválido, verifique e insira novamente por favor</string>
+    <string name="hint_search">Buscar</string>
 </resources>
