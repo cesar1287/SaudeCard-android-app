@@ -102,6 +102,12 @@ public class MainActivity extends AppCompatActivity {
 
         categoriesList.add(education);
 
+        Categorie laser = new Categorie();
+        Uri uriLaser = Uri.parse(Utility.URI_PACKAGE + R.drawable.menu_0027_laser);
+        laser.setIcon(uriLaser);
+
+        categoriesList.add(laser);
+
         Categorie sport = new Categorie();
         Uri uriSport = Uri.parse(Utility.URI_PACKAGE + R.drawable.menu_0023_esportes);
         sport.setIcon(uriSport);
@@ -113,12 +119,6 @@ public class MainActivity extends AppCompatActivity {
         home.setIcon(uriHome);
 
         categoriesList.add(home);
-
-        Categorie laser = new Categorie();
-        Uri uriLaser = Uri.parse(Utility.URI_PACKAGE + R.drawable.menu_0027_laser);
-        laser.setIcon(uriLaser);
-
-        categoriesList.add(laser);
 
         Categorie tech = new Categorie();
         Uri uriTech = Uri.parse(Utility.URI_PACKAGE + R.drawable.menu_0020_tecnologia);
