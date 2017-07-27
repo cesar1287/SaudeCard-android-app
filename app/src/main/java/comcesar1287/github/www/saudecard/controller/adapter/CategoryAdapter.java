@@ -12,18 +12,18 @@ import com.bumptech.glide.Glide;
 import java.util.List;
 
 import comcesar1287.github.www.saudecard.R;
-import comcesar1287.github.www.saudecard.controller.domain.Categorie;
+import comcesar1287.github.www.saudecard.controller.domain.Category;
 import comcesar1287.github.www.saudecard.controller.interfaces.RecyclerViewOnClickListenerHack;
 
 
 public class CategorieAdapter extends RecyclerView.Adapter<CategorieAdapter.MyViewHolder>{
 
-    private List<Categorie> mList;
+    private List<Category> mList;
     private LayoutInflater mLayoutInflater;
     private RecyclerViewOnClickListenerHack mRecyclerViewOnClickListenerHack;
     private Context c;
 
-    public CategorieAdapter(Context c, List<Categorie> l){
+    public CategorieAdapter(Context c, List<Category> l){
         this.c = c;
         mList = l;
         mLayoutInflater = (LayoutInflater) c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);

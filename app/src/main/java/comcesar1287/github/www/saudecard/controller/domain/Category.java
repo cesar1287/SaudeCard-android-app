@@ -4,6 +4,7 @@ import android.net.Uri;
 
 public class Categorie {
 
+    private String name;
     private Uri icon;
 
     public Uri getIcon() {
@@ -12,5 +13,13 @@ public class Categorie {
 
     public void setIcon(Uri icon) {
         this.icon = icon;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

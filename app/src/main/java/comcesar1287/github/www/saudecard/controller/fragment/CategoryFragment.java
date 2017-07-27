@@ -11,20 +11,20 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import java.util.List;
 
 import comcesar1287.github.www.saudecard.R;
 import comcesar1287.github.www.saudecard.controller.adapter.CategorieAdapter;
-import comcesar1287.github.www.saudecard.controller.domain.Categorie;
+import comcesar1287.github.www.saudecard.controller.domain.Category;
 import comcesar1287.github.www.saudecard.controller.interfaces.RecyclerViewOnClickListenerHack;
+import comcesar1287.github.www.saudecard.controller.util.Utility;
 import comcesar1287.github.www.saudecard.view.MainActivity;
 
 public class CategorieFragment extends Fragment implements RecyclerViewOnClickListenerHack {
 
     RecyclerView mRecyclerView;
-    public List<Categorie> mList;
+    public List<Category> mList;
     public CategorieAdapter adapter;
 
     @Override
@@ -54,10 +54,10 @@ public class CategorieFragment extends Fragment implements RecyclerViewOnClickLi
 
     @Override
     public void onClickListener(View view, int position) {
-        /*Intent intent = new Intent(getActivity(), SegmentCategoryActivity.class);
+        Intent intent = new Intent(getActivity(), SegmentCategoryActivity.class);
         intent.putExtra(Utility.SEGMENTO, mList.get(position).getName());
         intent.putExtra(Utility.SEGMENTO_FIREBASE, mList.get(position).getNameFirebase());
-        startActivity(intent);*/
+        startActivity(intent);
     }
 
     private static class RecyclerViewTouchListener implements RecyclerView.OnItemTouchListener {
