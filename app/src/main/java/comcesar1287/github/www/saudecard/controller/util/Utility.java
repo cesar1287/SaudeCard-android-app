@@ -16,22 +16,21 @@ public class Utility {
 
     public static final String LINK_BE_PARTNER = "http://www.brasilcardfacil.com.br/modalidade-parceria.html";
 
-    public static final String FOOD = "alimentacao";
-    public static final String ART_DESIGN = "art_design";
+    public static final String HEALTH = "saude";
+    public static final String ALIMENTATION = "alimentacao";
+    public static final String ANIMAL = "animal";
+    public static final String GRAPHIC_ART = "arte_grafica";
+    public static final String AUTO = "auto";
     public static final String BEAUTY = "beleza";
+    public static final String COMMERCE = "comercio";
     public static final String CONSULTING = "consultoria";
     public static final String EDUCATION = "educacao";
-    public static final String SPORT = "esporte";
-    public static final String CLOTHING = "vestuario";
-    public static final String TOURISM = "turismo";
-    public static final String AUTO = "auto";
-    public static final String TECH = "tecnologia";
-    public static final String HEALTH = "saude";
-    public static final String HOME = "lar_construcao";
     public static final String ENTERTAINMENT = "entretenimento";
-    public static final String WORLD_ANIMAL = "mundo_animal";
-    public static final String TRADE = "trade";
-    public static final String SERVICES = "servicos";
+    public static final String SPORT = "esporte";
+    public static final String HOME = "lar_construcao";
+    public static final String TECH = "tecnologia";
+    public static final String TOURISM = "turismo";
+    public static final String CLOTHING = "vestuario";
 
     public static final String KEY_CONTENT_EXTRA_PLANS = "link";
     public static final String KEY_CONTENT_EXTRA_PARTNER = "partner";

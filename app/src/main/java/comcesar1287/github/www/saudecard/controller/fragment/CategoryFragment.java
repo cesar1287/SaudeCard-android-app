@@ -15,23 +15,24 @@ import android.view.ViewGroup;
 import java.util.List;
 
 import comcesar1287.github.www.saudecard.R;
-import comcesar1287.github.www.saudecard.controller.adapter.CategorieAdapter;
+import comcesar1287.github.www.saudecard.controller.adapter.CategoryAdapter;
 import comcesar1287.github.www.saudecard.controller.domain.Category;
 import comcesar1287.github.www.saudecard.controller.interfaces.RecyclerViewOnClickListenerHack;
 import comcesar1287.github.www.saudecard.controller.util.Utility;
+import comcesar1287.github.www.saudecard.view.CategoryActivity;
 import comcesar1287.github.www.saudecard.view.MainActivity;
 
-public class CategorieFragment extends Fragment implements RecyclerViewOnClickListenerHack {
+public class CategoryFragment extends Fragment implements RecyclerViewOnClickListenerHack {
 
     RecyclerView mRecyclerView;
     public List<Category> mList;
-    public CategorieAdapter adapter;
+    public CategoryAdapter adapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater,
                              ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_categorie, container, false);
+        View view = inflater.inflate(R.layout.fragment_category, container, false);
 
         mRecyclerView = (RecyclerView) view.findViewById(R.id.rvCategories);
         mRecyclerView.setHasFixedSize(true);
@@ -41,7 +42,7 @@ public class CategorieFragment extends Fragment implements RecyclerViewOnClickLi
         mRecyclerView.setLayoutManager(gridLayoutManager);
 
         mList = ((MainActivity) getActivity()).getCategoriesList();
-        adapter = new CategorieAdapter(getActivity(), mList);
+        adapter = new CategoryAdapter(getActivity(), mList);
 
         adapter.setRecyclerViewOnClickListenerHack(this);
         mRecyclerView.setAdapter( adapter );
@@ -54,9 +55,8 @@ public class CategorieFragment extends Fragment implements RecyclerViewOnClickLi
 
     @Override
     public void onClickListener(View view, int position) {
-        Intent intent = new Intent(getActivity(), SegmentCategoryActivity.class);
-        intent.putExtra(Utility.SEGMENTO, mList.get(position).getName());
-        intent.putExtra(Utility.SEGMENTO_FIREBASE, mList.get(position).getNameFirebase());
+        Intent intent = new Intent(getActivity(), CategoryActivity.class);
+        intent.putExtra(Utility.CATEGORY, mList.get(position).getName());
         startActivity(intent);
     }
 

@@ -2,7 +2,7 @@ package comcesar1287.github.www.saudecard.controller.domain;
 
 import android.net.Uri;
 
-public class Categorie {
+public class Category {
 
     private String name;
     private Uri icon;

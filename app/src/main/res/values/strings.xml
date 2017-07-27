@@ -16,6 +16,7 @@
     <string name="error_all_fields_required">Todos os campos são obrigatórios, tente novamente.</string>
     <string name="error_create_new_account">Algo deu errado ao tentar criar a conta, tente novamente.</string>
     <string name="error_user_password_incorrect">Usuário e/ou senha incorreto(s).</string>
+    <string name="error_invalid_cpf">CPF inválido, verifique e insira novamente por favor</string>
 
     <string name="user_created_successfully">Usuário criado com sucesso.</string>
 
@@ -26,8 +27,24 @@
     <string name="hint_email">Email</string>
     <string name="hint_cpf">CPF</string>
     <string name="hint_password">Senha</string>
+    <string name="hint_search">Buscar</string>
 
     <string name="cpf_mask">###.###.###-##</string>
-    <string name="error_invalid_cpf">CPF inválido, verifique e insira novamente por favor</string>
-    <string name="hint_search">Buscar</string>
+
+    <string name="screen_alimentation">Alimentação</string>
+    <string name="screen_graphic_art">Arte e Gráfica</string>
+    <string name="screen_auto">Automotivos</string>
+    <string name="screen_beauty">Beleza</string>
+    <string name="screen_consulting">Consultoria</string>
+    <string name="screen_education">Educação</string>
+    <string name="screen_sport">Esporte</string>
+    <string name="screen_clothing">Vestuário</string>
+    <string name="screen_entertainment">Entretenimento</string>
+    <string name="screen_home">Lar e Construção</string>
+    <string name="screen_tourism">Turismo</string>
+    <string name="screen_commerce">Comércio</string>
+    <string name="screen_health">Saúde</string>
+    <string name="screen_tech">Tecnologia</string>
+    <string name="screen_selection_local">Selecione o local</string>
+    <string name="screen_animal">Animal</string>
 </resources>

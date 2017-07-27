@@ -16,23 +16,23 @@ import comcesar1287.github.www.saudecard.controller.domain.Category;
 import comcesar1287.github.www.saudecard.controller.interfaces.RecyclerViewOnClickListenerHack;
 
 
-public class CategorieAdapter extends RecyclerView.Adapter<CategorieAdapter.MyViewHolder>{
+public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyViewHolder>{
 
     private List<Category> mList;
     private LayoutInflater mLayoutInflater;
     private RecyclerViewOnClickListenerHack mRecyclerViewOnClickListenerHack;
     private Context c;
 
-    public CategorieAdapter(Context c, List<Category> l){
+    public CategoryAdapter(Context c, List<Category> l){
         this.c = c;
         mList = l;
         mLayoutInflater = (LayoutInflater) c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
     @Override
-    public CategorieAdapter.MyViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
+    public CategoryAdapter.MyViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
 
-        View v = mLayoutInflater.inflate(R.layout.item_categorie, viewGroup, false);
+        View v = mLayoutInflater.inflate(R.layout.item_category, viewGroup, false);
         return new MyViewHolder(v);
     }
 
