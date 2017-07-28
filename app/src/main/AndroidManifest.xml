@@ -43,7 +43,7 @@
             android:screenOrientation="portrait"/>
 
         <activity
-            android:name=".view.CategoryActivity"
+            android:name=".view.PartnerCategoryActivity"
             android:screenOrientation="portrait"
             android:parentActivityName=".view.MainActivity"
             android:theme="@style/AppTheme.NoActionBar"/>

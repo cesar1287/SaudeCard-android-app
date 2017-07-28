@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?android:attr/selectableItemBackground"
+    android:layout_marginTop="5dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    android:layout_marginRight="5dp">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="5dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/partner_logo"
+            android:background="@drawable/teste_partner"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
+        <RelativeLayout
+            android:layout_marginLeft="100dp"
+            android:layout_marginStart="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/partner_name"
+                android:text="nome empresa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"/>
+
+            <TextView
+                android:id="@+id/partner_address"
+                android:text="endereço"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/partner_name" />
+
+            <TextView
+                android:id="@+id/partner_segment"
+                android:text="segmento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/partner_address"/>
+
+            <ImageView
+                android:id="@+id/partner_discount_bg"
+                android:background="@drawable/parceiros_0010_bg_porcentagem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/partner_segment"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <ImageView
+                android:id="@+id/partner_favorite"
+                android:background="@drawable/parceiros_0008_ellipse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/partner_discount_bg"
+                android:layout_toLeftOf="@+id/partner_discount_bg"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_above="@id/partner_segment"/>
+
+            <TextView
+                android:id="@+id/partner_discount"
+                android:text="10%"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_above="@id/partner_segment"
+                android:layout_marginEnd="17dp"
+                android:layout_marginRight="17dp"
+                android:layout_marginBottom="4dp"/>
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

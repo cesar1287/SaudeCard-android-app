@@ -6,119 +6,109 @@
     android:layout_height="match_parent"
     tools:context="comcesar1287.github.www.saudecard.view.MainActivity">
 
-    <android.support.design.widget.CoordinatorLayout
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:layout_height="wrap_content"
         android:focusable="true"
-        android:focusableInTouchMode="true">
+        android:focusableInTouchMode="true"
+        app:elevation="@dimen/default_elevation">
 
-        <android.support.design.widget.AppBarLayout
-            android:id="@+id/appBarLayout"
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/view_menu_toolbar" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/sub_actionBar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:elevation="@dimen/default_elevation">
-
-            <include
-                android:id="@+id/toolbar"
-                layout="@layout/view_menu_toolbar" />
-
-        </android.support.design.widget.AppBarLayout>
-
-        <RelativeLayout
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:id="@+id/sub_actionBar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:weightSum="1"
-                android:background="@color/colorSubActionBar">
-                
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5">
-
-                    <comcesar1287.github.www.saudecard.controller.custom_widgets.MyCustomEditText
-                        android:hint="@string/hint_search"
-                        android:textAlignment="textEnd"
-                        android:gravity="end"
-                        android:padding="3dp"
-                        android:drawablePadding="5dp"
-                        android:paddingEnd="10dp"
-                        android:paddingRight="10dp"
-                        android:paddingLeft="10dp"
-                        android:layout_marginEnd="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_centerVertical="true"
-                        android:background="@drawable/button_border_search"
-                        android:drawableRight="@drawable/menu_0004_search_icon"
-                        android:drawableEnd="@drawable/menu_0004_search_icon"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
-                </RelativeLayout>
-                
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.1"
-                    android:layout_gravity="center"
-                    android:scaleX="0.7"
-                    android:background="@drawable/menu_0010_telecompras_icon"/>
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.1"
-                    android:layout_gravity="center"
-                    android:scaleX="0.7"
-                    android:background="@drawable/menu_0009_agenda_icon"/>
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.1"
-                    android:layout_gravity="center"
-                    android:scaleX="0.7"
-                    android:background="@drawable/menu_0007_local_icon"/>
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.1"
-                    android:layout_gravity="center"
-                    android:scaleX="0.5"
-                    android:background="@drawable/menu_0006_flame_icon"/>
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.1"
-                    android:layout_gravity="center"
-                    android:scaleX="0.5"
-                    android:background="@drawable/menu_0008_user_icon"/>
-
-
-            </LinearLayout>
+            android:layout_height="?attr/actionBarSize"
+            android:weightSum="1"
+            android:background="@color/colorSubActionBar">
 
             <RelativeLayout
-                android:layout_below="@+id/sub_actionBar"
-                android:id="@+id/categories_fragment_container"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_centerHorizontal="true" />
-        </RelativeLayout>
+                android:layout_weight="0.5">
 
-    </android.support.design.widget.CoordinatorLayout>
+                <comcesar1287.github.www.saudecard.controller.custom_widgets.MyCustomEditText
+                    android:hint="@string/hint_search"
+                    android:textAlignment="textEnd"
+                    android:gravity="end"
+                    android:padding="3dp"
+                    android:drawablePadding="5dp"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/button_border_search"
+                    android:drawableRight="@drawable/menu_0004_search_icon"
+                    android:drawableEnd="@drawable/menu_0004_search_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:layout_gravity="center"
+                android:scaleX="0.7"
+                android:background="@drawable/menu_0010_telecompras_icon"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:layout_gravity="center"
+                android:scaleX="0.7"
+                android:background="@drawable/menu_0009_agenda_icon"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:layout_gravity="center"
+                android:scaleX="0.7"
+                android:background="@drawable/menu_0007_local_icon"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:layout_gravity="center"
+                android:scaleX="0.5"
+                android:background="@drawable/menu_0006_flame_icon"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:layout_gravity="center"
+                android:scaleX="0.5"
+                android:background="@drawable/menu_0008_user_icon"/>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_below="@+id/sub_actionBar"
+            android:id="@+id/categories_fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
 
 </RelativeLayout>

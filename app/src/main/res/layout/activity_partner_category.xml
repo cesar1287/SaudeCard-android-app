@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="comcesar1287.github.www.saudecard.view.CategoryActivity">
+    tools:context="comcesar1287.github.www.saudecard.view.PartnerCategoryActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/category_toolbar"
@@ -22,4 +22,13 @@
             android:layout_gravity="center"
             android:textColor="@color/white"/>
     </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/partners_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/category_toolbar"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5sp" />
 </RelativeLayout>
