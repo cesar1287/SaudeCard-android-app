@@ -55,4 +55,6 @@
     <string name="message_partner_removed_favorities">Parceiro adicionado aos favoritos</string>
 
     <string name="action_favorite">Favorito</string>
+
+    <string name="google_maps_api_key">AIzaSyBYVOQBESyzj7rJBVTd8dnE9yRIN0qk8bU</string>
 </resources>
