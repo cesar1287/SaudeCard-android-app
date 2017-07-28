@@ -1,6 +1,5 @@
 package comcesar1287.github.www.saudecard.view;
 
-import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
@@ -10,8 +9,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
@@ -37,14 +34,10 @@ public class PartnerDetailsActivity extends AppCompatActivity {
     ValueEventListener valueEventListener;
     ValueEventListener singleValueEventListener;
 
-    private ProgressDialog dialog;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_partner_details);
-
-        DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
 
         dao = new SaudeCardDAO(getApplicationContext());
         id_user = FirebaseAuth.getInstance().getCurrentUser().getUid();
