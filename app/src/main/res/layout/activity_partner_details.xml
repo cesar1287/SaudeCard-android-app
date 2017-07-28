@@ -1,9 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_partner_details"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="comcesar1287.github.www.saudecard.view.PartnerDetailsActivity">
+    tools:context=".view.PartnerDetailsActivity">
 
-</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="@color/black"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:id="@+id/partner_details_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:layout_centerHorizontal="true"
+            />
+
+        <TextView
+            android:textColor="@color/black"
+            android:id="@+id/partner_details_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/partner_details_name"
+            android:layout_marginTop="20sp"
+            android:layout_marginBottom="20sp"
+            android:layout_centerHorizontal="true"
+            android:paddingLeft="30sp"
+            android:paddingStart="30sp"
+            android:paddingRight="30sp"
+            android:paddingEnd="30sp"/>
+
+        <TextView
+            android:textColor="@color/black"
+            android:id="@+id/partner_details_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/partner_details_description"
+            android:layout_marginBottom="20sp"
+            android:layout_centerHorizontal="true"
+            android:paddingLeft="30sp"
+            android:paddingStart="30sp"
+            android:paddingRight="30sp"
+            android:paddingEnd="30sp"/>
+
+        <RelativeLayout
+            android:id="@+id/map_fragment_container"
+            android:layout_width="280sp"
+            android:layout_height="150sp"
+            android:layout_below="@id/partner_details_address"
+            android:layout_centerHorizontal="true">
+
+        </RelativeLayout>
+
+        <TextView
+            android:textColor="@color/black"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:id="@+id/partner_details_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/map_fragment_container"
+            android:layout_marginTop="20sp"
+            android:layout_centerHorizontal="true"
+            android:paddingLeft="30sp"
+            android:paddingStart="30sp"
+            android:paddingRight="30sp"
+            android:paddingEnd="30sp"/>
+
+        <TextView
+            android:textColor="@color/black"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:id="@+id/partner_details_site"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/partner_details_phone"
+            android:layout_centerHorizontal="true"
+            android:paddingLeft="30sp"
+            android:paddingStart="30sp"
+            android:paddingRight="30sp"
+            android:paddingEnd="30sp"
+            android:layout_marginBottom="20sp"/>
+
+    </RelativeLayout>
+
+</ScrollView>

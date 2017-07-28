@@ -50,4 +50,9 @@
     <string name="screen_animal">Animal</string>
 
     <string name="loading_partners_pls_wait">Carregando parceiros, por favor aguarde!!!</string>
+
+    <string name="message_partner_added_favorities">Parceiro removido dos favoritos</string>
+    <string name="message_partner_removed_favorities">Parceiro adicionado aos favoritos</string>
+
+    <string name="action_favorite">Favorito</string>
 </resources>

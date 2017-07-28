@@ -18,7 +18,6 @@
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/partner_logo"
-            android:background="@drawable/teste_partner"
             android:layout_width="100dp"
             android:layout_height="100dp" />
 
