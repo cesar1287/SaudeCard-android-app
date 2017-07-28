@@ -6,7 +6,7 @@ import comcesar1287.github.www.saudecard.controller.domain.User;
 
 public class FirebaseHelper {
 
-    public static final String FIREBASE_DATABASE_ORDERBY = "city";
+    public static final String FIREBASE_DATABASE_ORDERBY = "name";
     public static final String FIREBASE_DATABASE_ORDERBY_TITLE = "title";
     public static final String FIREBASE_DATABASE_OFFER = "offer";
     public static final String FIREBASE_DATABASE_USERS = "users";
