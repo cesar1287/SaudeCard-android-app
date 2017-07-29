@@ -39,11 +39,13 @@ public class PartnerAdapter extends RecyclerView.Adapter<PartnerAdapter.MyViewHo
     @Override
     public void onBindViewHolder(MyViewHolder myViewHolder, int position) {
 
+        String address = mList.get(position).getAddress();
+
         Glide.with(c)
                 .load(mList.get((position)).getUrlLogo())
                 .into(myViewHolder.picPartner);
         myViewHolder.namePartner.setText(mList.get(position).getName());
-        myViewHolder.addressPartner.setText(mList.get(position).getAddress());
+        myViewHolder.addressPartner.setText((address.length()>25) ? address.substring(0,25)+"..." : address);
         myViewHolder.segmentPartner.setText(mList.get(position).getSubcategory());
         myViewHolder.discountPartner.setText(mList.get(position).getDiscount());
     }
