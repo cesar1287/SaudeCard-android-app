@@ -39,6 +39,9 @@
                 android:layout_weight="0.5">
 
                 <comcesar1287.github.www.saudecard.controller.custom_widgets.MyCustomEditText
+                    android:id="@+id/menu_search"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
                     android:hint="@string/hint_search"
                     android:textAlignment="textEnd"
                     android:gravity="end"
@@ -60,7 +63,8 @@
 
             </RelativeLayout>
 
-            <ImageView
+            <ImageButton
+                android:id="@+id/menu_buy"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.1"
@@ -68,7 +72,8 @@
                 android:scaleX="0.7"
                 android:background="@drawable/menu_0010_telecompras_icon"/>
 
-            <ImageView
+            <ImageButton
+                android:id="@+id/menu_diary"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.1"
@@ -76,7 +81,8 @@
                 android:scaleX="0.7"
                 android:background="@drawable/menu_0009_agenda_icon"/>
 
-            <ImageView
+            <ImageButton
+                android:id="@+id/menu_nearby"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.1"
@@ -84,7 +90,8 @@
                 android:scaleX="0.7"
                 android:background="@drawable/menu_0007_local_icon"/>
 
-            <ImageView
+            <ImageButton
+                android:id="@+id/menu_flame"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.1"
@@ -92,14 +99,14 @@
                 android:scaleX="0.5"
                 android:background="@drawable/menu_0006_flame_icon"/>
 
-            <ImageView
+            <ImageButton
+                android:id="@+id/menu_account"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.1"
                 android:layout_gravity="center"
                 android:scaleX="0.5"
                 android:background="@drawable/menu_0008_user_icon"/>
-
 
         </LinearLayout>
 

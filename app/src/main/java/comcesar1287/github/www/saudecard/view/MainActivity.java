@@ -5,8 +5,13 @@ import android.net.Uri;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.InputType;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageButton;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -19,7 +24,7 @@ import comcesar1287.github.www.saudecard.controller.domain.Category;
 import comcesar1287.github.www.saudecard.controller.fragment.CategoryFragment;
 import comcesar1287.github.www.saudecard.controller.util.Utility;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     private FirebaseAuth.AuthStateListener mAuthListener;
     private FirebaseAuth mAuth;
@@ -30,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
     CategoryFragment frag;
 
     ArrayList<Category> categoriesList = new ArrayList<>();
+
+    EditText etSearch;
+    ImageButton ibBuy, ibDiary, ibNearby, ibFlame, ibAccount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +52,75 @@ public class MainActivity extends AppCompatActivity {
         setupUI();
     }
 
+    @Override
+    public void onClick(View view) {
+        int id = view.getId();
+
+        switch (id){
+            case R.id.menu_search:
+                etSearch.clearFocus();
+                showDisabledFeatureAlert();
+                break;
+            case R.id.menu_buy:
+                showDisabledFeatureAlert();
+                break;
+            case R.id.menu_diary:
+                showDisabledFeatureAlert();
+                break;
+            case R.id.menu_nearby:
+                showDisabledFeatureAlert();
+                break;
+            case R.id.menu_flame:
+                showDisabledFeatureAlert();
+                break;
+            case R.id.menu_account:
+                showDisabledFeatureAlert();
+                break;
+        }
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        mAuth.addAuthStateListener(mAuthListener);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        if (mAuthListener != null) {
+            mAuth.removeAuthStateListener(mAuthListener);
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if(handler != null) {
+            handler.removeCallbacks(myRunnable);
+        }
+    }
+
     private void setupUI() {
+
+        etSearch = (EditText) findViewById(R.id.menu_search);
+        etSearch.setInputType(InputType.TYPE_NULL);
+        etSearch.setOnClickListener(this);
+
+        ibBuy = (ImageButton) findViewById(R.id.menu_buy);
+        ibBuy.setOnClickListener(this);
+
+        ibDiary = (ImageButton) findViewById(R.id.menu_diary);
+        ibDiary.setOnClickListener(this);
+
+        ibNearby = (ImageButton) findViewById(R.id.menu_nearby);
+        ibNearby.setOnClickListener(this);
+
+        ibFlame = (ImageButton) findViewById(R.id.menu_flame);
+        ibFlame.setOnClickListener(this);
+
+        ibAccount = (ImageButton) findViewById(R.id.menu_account);
+        ibAccount.setOnClickListener(this);
 
         Category health = new Category();
         Uri uriHealth = Uri.parse(Utility.URI_PACKAGE + R.drawable.menu_0014_saude);
@@ -160,6 +236,14 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void showDisabledFeatureAlert(){
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Esta função estará disponível em breve.");
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
     public List<Category> getCategoriesList() {
         return categoriesList;
     }
@@ -177,27 +261,5 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         };
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        mAuth.addAuthStateListener(mAuthListener);
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-        if (mAuthListener != null) {
-            mAuth.removeAuthStateListener(mAuthListener);
-        }
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        if(handler != null) {
-            handler.removeCallbacks(myRunnable);
-        }
     }
 }
