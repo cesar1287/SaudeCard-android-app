@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -24,7 +25,9 @@ import comcesar1287.github.www.saudecard.R;
 import comcesar1287.github.www.saudecard.controller.domain.Partner;
 import comcesar1287.github.www.saudecard.controller.firebase.FirebaseHelper;
 import comcesar1287.github.www.saudecard.controller.fragment.PartnerFragment;
+import comcesar1287.github.www.saudecard.controller.util.Singleton;
 import comcesar1287.github.www.saudecard.controller.util.Utility;
+import comcesar1287.github.www.saudecard.model.SaudeCardDAO;
 
 public class PartnerCategoryActivity extends AppCompatActivity {
 
@@ -43,6 +46,8 @@ public class PartnerCategoryActivity extends AppCompatActivity {
     ValueEventListener valueEventListener;
     ValueEventListener singleValueEventListener;
 
+    SaudeCardDAO dao;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +57,8 @@ public class PartnerCategoryActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         tvTitleActionBar = (TextView) findViewById(R.id.tv_title_action_bar);
+
+        dao = new SaudeCardDAO(getApplicationContext());
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
@@ -70,6 +77,25 @@ public class PartnerCategoryActivity extends AppCompatActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        if(frag!=null) {
+            frag.mList.clear();
+
+            partnersList = new ArrayList<>(Singleton.getInstance().getPartnersList());
+
+            for(Partner partner: partnersList){
+                partner.setFavorite(dao.isFavorite(FirebaseAuth.getInstance().getCurrentUser().getUid(), partner.getUrlLogo()));
+            }
+            dao.close();
+
+            frag.mList.addAll(partnersList);
+            frag.adapter.notifyDataSetChanged();
+        }
     }
 
     public void loadList(){
@@ -94,9 +120,12 @@ public class PartnerCategoryActivity extends AppCompatActivity {
                     p.setLongitude((Double) postSnapshot.child(FirebaseHelper.FIREBASE_DATABASE_PARTNER_LONGITUDE).getValue());
                     p.setDiscount((String) postSnapshot.child(FirebaseHelper.FIREBASE_DATABASE_PARTNER_DISCOUNT).getValue());
                     p.setCategory(category);
+                    p.setFavorite(dao.isFavorite(FirebaseAuth.getInstance().getCurrentUser().getUid(), p.getUrlLogo()));
 
                     partnersList.add(p);
                 }
+
+                Singleton.getInstance().setPartnersList(partnersList);
             }
 
             @Override

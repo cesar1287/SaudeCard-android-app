@@ -6,6 +6,15 @@ public class Partner implements Serializable {
 
     private String category, subcategory, name, url_logo, description, address, phone, site, tag, discount;
     private Double latitude, longitude;
+    private boolean favorite;
+
+    public boolean isFavorite() {
+        return favorite;
+    }
+
+    public void setFavorite(boolean favorite) {
+        this.favorite = favorite;
+    }
 
     public String getCategory() {
         return category;

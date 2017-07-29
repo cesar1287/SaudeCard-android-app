@@ -48,6 +48,7 @@ public class PartnerAdapter extends RecyclerView.Adapter<PartnerAdapter.MyViewHo
         myViewHolder.addressPartner.setText((address.length()>14) ? address.substring(0,13)+"..." : address);
         myViewHolder.segmentPartner.setText(mList.get(position).getSubcategory());
         myViewHolder.discountPartner.setText(mList.get(position).getDiscount());
+        myViewHolder.favoritePartner.setVisibility((mList.get(position).isFavorite()) ? View.VISIBLE : View.GONE);
     }
 
     @Override
@@ -60,7 +61,7 @@ public class PartnerAdapter extends RecyclerView.Adapter<PartnerAdapter.MyViewHo
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener /*View.OnCreateContextMenuListener*/{
-        ImageView picPartner;
+        ImageView picPartner, favoritePartner;
         TextView namePartner, addressPartner, segmentPartner, discountPartner;
 
         MyViewHolder(View itemView) {
@@ -70,6 +71,7 @@ public class PartnerAdapter extends RecyclerView.Adapter<PartnerAdapter.MyViewHo
             addressPartner = (TextView) itemView.findViewById(R.id.partner_address);
             segmentPartner = (TextView) itemView.findViewById(R.id.partner_segment);
             discountPartner = (TextView) itemView.findViewById(R.id.partner_discount);
+            favoritePartner = (ImageView) itemView.findViewById(R.id.partner_favorite);
 
             itemView.setOnClickListener(this);
         }

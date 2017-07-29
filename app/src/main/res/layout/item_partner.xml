@@ -75,7 +75,8 @@
                 android:layout_toLeftOf="@+id/partner_discount_bg"
                 android:layout_marginRight="10dp"
                 android:layout_marginEnd="10dp"
-                android:layout_above="@id/partner_segment"/>
+                android:layout_above="@id/partner_segment"
+                android:visibility="gone"/>
 
             <TextView
                 android:id="@+id/partner_discount"

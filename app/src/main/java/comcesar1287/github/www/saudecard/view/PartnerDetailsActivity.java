@@ -126,10 +126,10 @@ public class PartnerDetailsActivity extends AppCompatActivity {
                     Toast.makeText(this, R.string.message_partner_added_favorities, Toast.LENGTH_SHORT).show();
                 }else {
                     dao.insertFavorite(id_user, partner);
-                    dao.close();
                     item.setIcon(R.drawable.ic_heart_white_48dp);
                     Toast.makeText(this, R.string.message_partner_removed_favorities, Toast.LENGTH_SHORT).show();
                 }
+                dao.close();
                 break;
         }
         return super.onOptionsItemSelected(item);
