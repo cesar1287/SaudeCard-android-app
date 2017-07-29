@@ -45,7 +45,7 @@ public class PartnerAdapter extends RecyclerView.Adapter<PartnerAdapter.MyViewHo
                 .load(mList.get((position)).getUrlLogo())
                 .into(myViewHolder.picPartner);
         myViewHolder.namePartner.setText(mList.get(position).getName());
-        myViewHolder.addressPartner.setText((address.length()>25) ? address.substring(0,25)+"..." : address);
+        myViewHolder.addressPartner.setText((address.length()>14) ? address.substring(0,13)+"..." : address);
         myViewHolder.segmentPartner.setText(mList.get(position).getSubcategory());
         myViewHolder.discountPartner.setText(mList.get(position).getDiscount());
     }

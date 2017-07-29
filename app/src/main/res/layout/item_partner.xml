@@ -39,7 +39,7 @@
 
             <TextView
                 android:id="@+id/partner_address"
-                android:text="endereço"
+                android:text="endereçooooooo..."
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/partner_name"
