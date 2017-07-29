@@ -78,6 +78,8 @@ public class PartnerCategoryActivity extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
+                partnersList = new ArrayList<>();
+
                 Partner p;
                 for (DataSnapshot postSnapshot: dataSnapshot.getChildren()) {
                     p = new Partner();
@@ -90,6 +92,8 @@ public class PartnerCategoryActivity extends AppCompatActivity {
                     p.setSite((String)postSnapshot.child(FirebaseHelper.FIREBASE_DATABASE_PARTNER_SITE).getValue());
                     p.setLatitude((Double) postSnapshot.child(FirebaseHelper.FIREBASE_DATABASE_PARTNER_LATITUDE).getValue());
                     p.setLongitude((Double) postSnapshot.child(FirebaseHelper.FIREBASE_DATABASE_PARTNER_LONGITUDE).getValue());
+
+                    partnersList.add(p);
                 }
             }
 

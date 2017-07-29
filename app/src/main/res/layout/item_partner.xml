@@ -32,21 +32,28 @@
                 android:text="nome empresa"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"/>
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorTextPartner"
+                android:textSize="14sp"/>
 
             <TextView
                 android:id="@+id/partner_address"
                 android:text="endereço"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/partner_name" />
+                android:layout_below="@id/partner_name"
+                android:textColor="@color/colorTextPartner"
+                android:textSize="13sp"/>
 
             <TextView
                 android:id="@+id/partner_segment"
                 android:text="segmento"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/partner_address"/>
+                android:layout_below="@+id/partner_address"
+                android:textColor="@color/colorTextPartner"
+                android:textSize="12sp"/>
 
             <ImageView
                 android:id="@+id/partner_discount_bg"

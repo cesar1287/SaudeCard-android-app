@@ -16,7 +16,7 @@ import comcesar1287.github.www.saudecard.controller.firebase.FirebaseHelper;
 public class SaudeCardDAO extends SQLiteOpenHelper {
 
     private static final String DATABASE = "bd_saude_card";
-    private static final int VERSION = 0;
+    private static final int VERSION = 1;
     private static final String TABLE_FAVORITE = "favorite";
 
     public SaudeCardDAO(Context context) {
