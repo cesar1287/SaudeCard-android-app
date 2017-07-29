@@ -10,6 +10,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <ImageView
+            android:id="@+id/partner_details_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/banner_0015_saude"
+            android:scaleX="1.02"
+            android:scaleType="fitStart"
+            android:adjustViewBounds="true"/>
+
         <TextView
             android:textColor="@color/colorTextPartner"
             android:textStyle="bold"
@@ -17,6 +26,7 @@
             android:id="@+id/partner_details_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/partner_details_banner"
             android:layout_marginTop="20sp"
             android:layout_centerHorizontal="true" />
 

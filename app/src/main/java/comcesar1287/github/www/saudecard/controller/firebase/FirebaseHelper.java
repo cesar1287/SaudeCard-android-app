@@ -34,6 +34,7 @@ public class FirebaseHelper {
     public static final String FIREBASE_DATABASE_PARTNER_NAME = "name";
     public static final String FIREBASE_DATABASE_PARTNER_URL_LOGO = "url_logo";
     public static final String FIREBASE_DATABASE_PARTNER_DESCRIPTION = "description";
+    public static final String FIREBASE_DATABASE_PARTNER_DISCOUNT = "discount";
     public static final String FIREBASE_DATABASE_PARTNER_ADDRESS = "address";
     public static final String FIREBASE_DATABASE_PARTNER_PHONE = "phone";
     public static final String FIREBASE_DATABASE_PARTNER_SITE = "site";

@@ -1,10 +1,12 @@
 package comcesar1287.github.www.saudecard.view;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,6 +35,8 @@ public class PartnerDetailsActivity extends AppCompatActivity {
 
     ValueEventListener valueEventListener;
     ValueEventListener singleValueEventListener;
+
+    ImageView banner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,6 +93,18 @@ public class PartnerDetailsActivity extends AppCompatActivity {
         tv_phone.setText(partner.getPhone());
         TextView tv_site = (TextView) findViewById(R.id.partner_details_site);
         tv_site.setText(partner.getSite());
+
+        banner = (ImageView) findViewById(R.id.partner_details_banner);
+
+        switch (partner.getCategory()) {
+            case Utility.HEALTH:
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    banner.setImageDrawable(getResources().getDrawable(R.drawable.banner_0015_saude, getApplicationContext().getTheme()));
+                } else {
+                    banner.setImageResource(R.drawable.banner_0015_saude);
+                }
+                break;
+        }
     }
 
     @Override

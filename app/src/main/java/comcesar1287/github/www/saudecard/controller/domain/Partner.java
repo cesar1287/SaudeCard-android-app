@@ -4,8 +4,16 @@ import java.io.Serializable;
 
 public class Partner implements Serializable {
 
-    private String subcategory, name, url_logo, description, address, phone, site, tag, discount;
+    private String category, subcategory, name, url_logo, description, address, phone, site, tag, discount;
     private Double latitude, longitude;
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
 
     public String getDiscount() {
         return discount;
