@@ -31,6 +31,7 @@ import comcesar1287.github.www.saudecard.R;
 import comcesar1287.github.www.saudecard.controller.domain.User;
 import comcesar1287.github.www.saudecard.controller.firebase.FirebaseHelper;
 import comcesar1287.github.www.saudecard.controller.util.Utility;
+import es.dmoral.toasty.Toasty;
 
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -89,41 +90,36 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
     public void createUser(){
         if(!Utility.verifyEmptyField(name, email, password, cpf)) {
-            dialog = ProgressDialog.show(SignUpActivity.this,"",
-                    SignUpActivity.this.getResources().getString(R.string.creating_user), true, false);
             cpf = cpf.replaceAll("[.]", "").replaceAll("[-]","");
             if(Utility.isValidCPF(cpf)) {
+                dialog = ProgressDialog.show(SignUpActivity.this,"",
+                        SignUpActivity.this.getResources().getString(R.string.creating_user), true, false);
                 mAuth.createUserWithEmailAndPassword(email, password)
                         .addOnFailureListener(SignUpActivity.this, new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception e) {
                                 dialog.dismiss();
                                 if (e instanceof FirebaseAuthWeakPasswordException) {
-                                    Toast.makeText(SignUpActivity.this, R.string.error_password_too_small,
-                                            Toast.LENGTH_LONG).show();
+                                    Toasty.error(SignUpActivity.this, getResources().getString(R.string.error_password_too_small), Toast.LENGTH_SHORT, true).show();
                                     etPassword.setText("");
                                     etPassword.requestFocus();
                                 } else if (e instanceof FirebaseAuthInvalidCredentialsException) {
-                                    Toast.makeText(SignUpActivity.this, R.string.error_invalid_email,
-                                            Toast.LENGTH_SHORT).show();
+                                    Toasty.error(SignUpActivity.this, getResources().getString(R.string.error_invalid_email), Toast.LENGTH_SHORT, true).show();
                                     etEmail.setText("");
                                     etEmail.requestFocus();
                                 } else if (e instanceof FirebaseAuthUserCollisionException) {
-                                    Toast.makeText(SignUpActivity.this, R.string.error_failed_signin_email_exists,
-                                            Toast.LENGTH_LONG).show();
+                                    Toasty.error(SignUpActivity.this, getResources().getString(R.string.error_failed_signin_email_exists), Toast.LENGTH_LONG, true).show();
                                     etEmail.setText("");
                                     etEmail.requestFocus();
                                 } else {
-                                    Toast.makeText(SignUpActivity.this, R.string.error_unknown_error,
-                                            Toast.LENGTH_SHORT).show();
+                                    Toasty.error(SignUpActivity.this, getResources().getString(R.string.error_unknown_error), Toast.LENGTH_SHORT, true).show();
                                 }
                             }
                         })
                         .addOnSuccessListener(SignUpActivity.this, new OnSuccessListener<AuthResult>() {
                             @Override
                             public void onSuccess(AuthResult authResult) {
-                                Toast.makeText(SignUpActivity.this, R.string.user_created_successfully,
-                                        Toast.LENGTH_SHORT).show();
+                                Toasty.success(SignUpActivity.this, getResources().getString(R.string.user_created_successfully), Toast.LENGTH_SHORT, true).show();
 
                                 FirebaseAuth mAuth = FirebaseAuth.getInstance();
 
@@ -146,14 +142,12 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                             }
                         });
             }else{
-                Toast.makeText(SignUpActivity.this, R.string.error_invalid_cpf,
-                        Toast.LENGTH_LONG).show();
+                Toasty.error(SignUpActivity.this, getResources().getString(R.string.error_invalid_cpf), Toast.LENGTH_LONG, true).show();
                 etCPF.setText("");
                 etCPF.requestFocus();
             }
         }else{
-            Toast.makeText(SignUpActivity.this, R.string.error_all_fields_required,
-                    Toast.LENGTH_SHORT).show();
+            Toasty.error(SignUpActivity.this, getResources().getString(R.string.error_all_fields_required), Toast.LENGTH_SHORT, true).show();
         }
     }
 
@@ -201,7 +195,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
                     @Override
                     public void onCancelled(DatabaseError databaseError) {
-                        Toast.makeText(SignUpActivity.this, R.string.error_create_new_account, Toast.LENGTH_LONG).show();
+                        Toasty.error(SignUpActivity.this, getResources().getString(R.string.error_create_new_account), Toast.LENGTH_SHORT, true).show();
                     }
                 });
     }

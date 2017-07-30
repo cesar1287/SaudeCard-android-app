@@ -52,6 +52,7 @@ import comcesar1287.github.www.saudecard.R;
 import comcesar1287.github.www.saudecard.controller.domain.User;
 import comcesar1287.github.www.saudecard.controller.firebase.FirebaseHelper;
 import comcesar1287.github.www.saudecard.controller.util.Utility;
+import es.dmoral.toasty.Toasty;
 
 public class SignWithActivity extends AppCompatActivity implements View.OnClickListener, GoogleApiClient.OnConnectionFailedListener{
 
@@ -105,12 +106,12 @@ public class SignWithActivity extends AppCompatActivity implements View.OnClickL
 
                     @Override
                     public void onCancel() {
-                        Toast.makeText(SignWithActivity.this, R.string.error_facebook_login_canceled, Toast.LENGTH_SHORT).show();
+                        Toasty.error(SignWithActivity.this, getResources().getString(R.string.error_facebook_login_canceled), Toast.LENGTH_SHORT, true).show();
                     }
 
                     @Override
                     public void onError(FacebookException exception) {
-                        Toast.makeText(SignWithActivity.this, R.string.error_facebook_login_unknown_error, Toast.LENGTH_SHORT).show();
+                        Toasty.error(SignWithActivity.this, getResources().getString(R.string.error_facebook_login_unknown_error), Toast.LENGTH_SHORT, true).show();
                     }
                 });
 
@@ -145,7 +146,7 @@ public class SignWithActivity extends AppCompatActivity implements View.OnClickL
                 firebaseAuthWithGoogle(account);
             } else {
                 // Google Sign In failed, update UI appropriately
-                Toast.makeText(this, R.string.error_failed_signin_google_account, Toast.LENGTH_SHORT).show();
+                Toasty.error(SignWithActivity.this, getResources().getString(R.string.error_failed_signin_google_account), Toast.LENGTH_SHORT, true).show();
             }
         }
     }
@@ -181,11 +182,9 @@ public class SignWithActivity extends AppCompatActivity implements View.OnClickL
                     public void onFailure(@NonNull Exception e) {
                         dialog.dismiss();
                         if(e instanceof FirebaseAuthUserCollisionException){
-                            Toast.makeText(SignWithActivity.this, R.string.error_failed_signin_email_exists,
-                                    Toast.LENGTH_LONG).show();
+                            Toasty.error(SignWithActivity.this, getResources().getString(R.string.error_failed_signin_email_exists), Toast.LENGTH_LONG, true).show();
                         }else{
-                            Toast.makeText(SignWithActivity.this, R.string.error_unknown_error,
-                                    Toast.LENGTH_SHORT).show();
+                            Toasty.error(SignWithActivity.this, getResources().getString(R.string.error_unknown_error), Toast.LENGTH_SHORT, true).show();
                         }
                     }
                 })
@@ -224,11 +223,9 @@ public class SignWithActivity extends AppCompatActivity implements View.OnClickL
                     public void onFailure(@NonNull Exception e) {
                         dialog.dismiss();
                         if(e instanceof FirebaseAuthUserCollisionException){
-                            Toast.makeText(SignWithActivity.this, R.string.error_failed_signin_email_exists,
-                                    Toast.LENGTH_LONG).show();
+                            Toasty.error(SignWithActivity.this, getResources().getString(R.string.error_failed_signin_email_exists), Toast.LENGTH_LONG, true).show();
                         }else{
-                            Toast.makeText(SignWithActivity.this, R.string.error_unknown_error,
-                                    Toast.LENGTH_SHORT).show();
+                            Toasty.error(SignWithActivity.this, getResources().getString(R.string.error_unknown_error), Toast.LENGTH_SHORT, true).show();
                         }
                     }
                 })
@@ -303,7 +300,7 @@ public class SignWithActivity extends AppCompatActivity implements View.OnClickL
 
                     @Override
                     public void onCancelled(DatabaseError databaseError) {
-                        Toast.makeText(SignWithActivity.this, R.string.error_signin, Toast.LENGTH_LONG).show();
+                        Toasty.error(SignWithActivity.this, getResources().getString(R.string.error_signin), Toast.LENGTH_SHORT, true).show();
                     }
                 });
     }
@@ -317,6 +314,6 @@ public class SignWithActivity extends AppCompatActivity implements View.OnClickL
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
         // An unresolvable error has occurred and Google APIs (including Sign-In) will not
         // be available.
-        Toast.makeText(this, R.string.error_google_play_services, Toast.LENGTH_SHORT).show();
+        Toasty.error(SignWithActivity.this, getResources().getString(R.string.error_google_play_services), Toast.LENGTH_SHORT, true).show();
     }
 }

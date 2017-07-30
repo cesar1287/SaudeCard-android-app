@@ -28,6 +28,7 @@ import comcesar1287.github.www.saudecard.R;
 import comcesar1287.github.www.saudecard.controller.domain.User;
 import comcesar1287.github.www.saudecard.controller.firebase.FirebaseHelper;
 import comcesar1287.github.www.saudecard.controller.util.Utility;
+import es.dmoral.toasty.Toasty;
 
 public class SignInActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -85,8 +86,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
                         @Override
                         public void onFailure(@NonNull Exception e) {
                             dialog.dismiss();
-                            Toast.makeText(SignInActivity.this, R.string.error_user_password_incorrect,
-                                    Toast.LENGTH_SHORT).show();
+                            Toasty.error(SignInActivity.this, getResources().getString(R.string.error_user_password_incorrect), Toast.LENGTH_SHORT, true).show();
                         }
                     })
                     .addOnSuccessListener(SignInActivity.this, new OnSuccessListener<AuthResult>() {
@@ -116,8 +116,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
                         }
                     });
         }else{
-            Toast.makeText(SignInActivity.this, R.string.error_all_fields_required,
-                    Toast.LENGTH_SHORT).show();
+            Toasty.error(SignInActivity.this, getResources().getString(R.string.error_all_fields_required), Toast.LENGTH_SHORT, true).show();
         }
     }
 

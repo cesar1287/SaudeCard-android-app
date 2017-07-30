@@ -20,6 +20,7 @@ import comcesar1287.github.www.saudecard.controller.firebase.FirebaseHelper;
 import comcesar1287.github.www.saudecard.controller.fragment.MapViewFragment;
 import comcesar1287.github.www.saudecard.controller.util.Utility;
 import comcesar1287.github.www.saudecard.model.SaudeCardDAO;
+import es.dmoral.toasty.Toasty;
 
 
 public class PartnerDetailsActivity extends AppCompatActivity {
@@ -123,11 +124,11 @@ public class PartnerDetailsActivity extends AppCompatActivity {
                 if(dao.isFavorite(id_user, partner.getUrlLogo())){
                     dao.delete(id_user, partner.getUrlLogo());
                     item.setIcon(R.drawable.ic_heart_outline_white_48dp);
-                    Toast.makeText(this, R.string.message_partner_added_favorities, Toast.LENGTH_SHORT).show();
+                    Toasty.error(this, getResources().getString(R.string.message_partner_removed_favorities), Toast.LENGTH_SHORT, true).show();
                 }else {
                     dao.insertFavorite(id_user, partner);
                     item.setIcon(R.drawable.ic_heart_white_48dp);
-                    Toast.makeText(this, R.string.message_partner_removed_favorities, Toast.LENGTH_SHORT).show();
+                    Toasty.success(this, getResources().getString(R.string.message_partner_added_favorities), Toast.LENGTH_SHORT, true).show();
                 }
                 dao.close();
                 break;

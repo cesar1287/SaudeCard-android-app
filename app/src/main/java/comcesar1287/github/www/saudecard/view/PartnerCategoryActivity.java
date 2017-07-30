@@ -28,6 +28,7 @@ import comcesar1287.github.www.saudecard.controller.fragment.PartnerFragment;
 import comcesar1287.github.www.saudecard.controller.util.Singleton;
 import comcesar1287.github.www.saudecard.controller.util.Utility;
 import comcesar1287.github.www.saudecard.model.SaudeCardDAO;
+import es.dmoral.toasty.Toasty;
 
 public class PartnerCategoryActivity extends AppCompatActivity {
 
@@ -131,7 +132,7 @@ public class PartnerCategoryActivity extends AppCompatActivity {
             @Override
             public void onCancelled(DatabaseError databaseError) {
                 dialog.dismiss();
-                Toast.makeText(PartnerCategoryActivity.this, R.string.error_loading_partners, Toast.LENGTH_LONG).show();
+                Toasty.error(PartnerCategoryActivity.this, getResources().getString(R.string.error_loading_partners), Toast.LENGTH_SHORT, true).show();
                 finish();
             }
         };
@@ -153,7 +154,7 @@ public class PartnerCategoryActivity extends AppCompatActivity {
             @Override
             public void onCancelled(DatabaseError databaseError) {
                 dialog.dismiss();
-                Toast.makeText(PartnerCategoryActivity.this, R.string.error_loading_partners, Toast.LENGTH_LONG).show();
+                Toasty.error(PartnerCategoryActivity.this, getResources().getString(R.string.error_loading_partners), Toast.LENGTH_SHORT, true).show();
                 finish();
             }
         };
