@@ -64,13 +64,13 @@
             </RelativeLayout>
 
             <ImageButton
-                android:id="@+id/menu_buy"
+                android:id="@+id/menu_favorite"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.1"
                 android:layout_gravity="center"
                 android:scaleX="0.7"
-                android:background="@drawable/menu_0010_telecompras_icon"/>
+                android:background="@drawable/menu_0011_favorito_icon"/>
 
             <ImageButton
                 android:id="@+id/menu_diary"

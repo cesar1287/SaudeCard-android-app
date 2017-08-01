@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     ArrayList<Category> categoriesList = new ArrayList<>();
 
     EditText etSearch;
-    ImageButton ibBuy, ibDiary, ibNearby, ibFlame, ibAccount;
+    ImageButton ibFavorite, ibDiary, ibNearby, ibFlame, ibAccount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,8 +61,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 etSearch.clearFocus();
                 showDisabledFeatureAlert();
                 break;
-            case R.id.menu_buy:
-                showDisabledFeatureAlert();
+            case R.id.menu_favorite:
+                startActivity(new Intent(this, FavoriteActivity.class));
                 break;
             case R.id.menu_diary:
                 showDisabledFeatureAlert();
@@ -107,8 +107,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         etSearch.setInputType(InputType.TYPE_NULL);
         etSearch.setOnClickListener(this);
 
-        ibBuy = (ImageButton) findViewById(R.id.menu_buy);
-        ibBuy.setOnClickListener(this);
+        ibFavorite = (ImageButton) findViewById(R.id.menu_favorite);
+        ibFavorite.setOnClickListener(this);
 
         ibDiary = (ImageButton) findViewById(R.id.menu_diary);
         ibDiary.setOnClickListener(this);

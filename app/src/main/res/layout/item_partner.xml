@@ -16,10 +16,16 @@
         app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="5dp">
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/partner_logo"
+        <RelativeLayout
             android:layout_width="100dp"
-            android:layout_height="100dp" />
+            android:layout_height="100dp">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/partner_logo"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
 
         <RelativeLayout
             android:layout_marginLeft="100dp"
