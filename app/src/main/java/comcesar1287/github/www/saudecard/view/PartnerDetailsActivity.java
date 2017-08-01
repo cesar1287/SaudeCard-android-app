@@ -105,6 +105,104 @@ public class PartnerDetailsActivity extends AppCompatActivity {
                     banner.setImageResource(R.drawable.banner_0015_saude);
                 }
                 break;
+            case Utility.ALIMENTATION:
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    banner.setImageDrawable(getResources().getDrawable(R.drawable.banner_0014_alimentacao, getApplicationContext().getTheme()));
+                } else {
+                    banner.setImageResource(R.drawable.banner_0014_alimentacao);
+                }
+                break;
+            case Utility.ANIMAL:
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    banner.setImageDrawable(getResources().getDrawable(R.drawable.banner_0007_animal, getApplicationContext().getTheme()));
+                } else {
+                    banner.setImageResource(R.drawable.banner_0007_animal);
+                }
+                break;
+            case Utility.GRAPHIC_ART:
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    banner.setImageDrawable(getResources().getDrawable(R.drawable.banner_0010_arte_grafica, getApplicationContext().getTheme()));
+                } else {
+                    banner.setImageResource(R.drawable.banner_0010_arte_grafica);
+                }
+                break;
+            case Utility.AUTO:
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    banner.setImageDrawable(getResources().getDrawable(R.drawable.banner_0009_automotive, getApplicationContext().getTheme()));
+                } else {
+                    banner.setImageResource(R.drawable.banner_0009_automotive);
+                }
+                break;
+            case Utility.BEAUTY:
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    banner.setImageDrawable(getResources().getDrawable(R.drawable.banner_0008_beleza, getApplicationContext().getTheme()));
+                } else {
+                    banner.setImageResource(R.drawable.banner_0008_beleza);
+                }
+                break;
+            case Utility.COMMERCE:
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    banner.setImageDrawable(getResources().getDrawable(R.drawable.banner_0012_comercio, getApplicationContext().getTheme()));
+                } else {
+                    banner.setImageResource(R.drawable.banner_0012_comercio);
+                }
+                break;
+            case Utility.CONSULTING:
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    banner.setImageDrawable(getResources().getDrawable(R.drawable.banner_0011_consultoria, getApplicationContext().getTheme()));
+                } else {
+                    banner.setImageResource(R.drawable.banner_0011_consultoria);
+                }
+                break;
+            case Utility.EDUCATION:
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    banner.setImageDrawable(getResources().getDrawable(R.drawable.banner_0002_educacao, getApplicationContext().getTheme()));
+                } else {
+                    banner.setImageResource(R.drawable.banner_0002_educacao);
+                }
+                break;
+            case Utility.ENTERTAINMENT:
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    banner.setImageDrawable(getResources().getDrawable(R.drawable.banner_0013_entretenimento, getApplicationContext().getTheme()));
+                } else {
+                    banner.setImageResource(R.drawable.banner_0013_entretenimento);
+                }
+                break;
+            case Utility.SPORT:
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    banner.setImageDrawable(getResources().getDrawable(R.drawable.banner_0003_esportes, getApplicationContext().getTheme()));
+                } else {
+                    banner.setImageResource(R.drawable.banner_0003_esportes);
+                }
+                break;
+            case Utility.HOME:
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    banner.setImageDrawable(getResources().getDrawable(R.drawable.banner_0004_lar_construcao, getApplicationContext().getTheme()));
+                } else {
+                    banner.setImageResource(R.drawable.banner_0004_lar_construcao);
+                }
+                break;
+            case Utility.TECH:
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    banner.setImageDrawable(getResources().getDrawable(R.drawable.banner_0006_tecnologia, getApplicationContext().getTheme()));
+                } else {
+                    banner.setImageResource(R.drawable.banner_0006_tecnologia);
+                }
+                break;
+            case Utility.TOURISM:
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    banner.setImageDrawable(getResources().getDrawable(R.drawable.banner_0014_turismo, getApplicationContext().getTheme()));
+                } else {
+                    banner.setImageResource(R.drawable.banner_0014_turismo);
+                }
+                break;
+            case Utility.CLOTHING:
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    banner.setImageDrawable(getResources().getDrawable(R.drawable.banner_0005_vestuario, getApplicationContext().getTheme()));
+                } else {
+                    banner.setImageResource(R.drawable.banner_0005_vestuario);
+                }
+                break;
         }
     }
 
