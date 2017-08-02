@@ -122,6 +122,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ibAccount = (ImageButton) findViewById(R.id.menu_account);
         ibAccount.setOnClickListener(this);
 
+        Category exam = new Category();
+        Uri uriExam = Uri.parse(Utility.URI_PACKAGE + R.drawable.menu_0029_exames);
+        exam.setIcon(uriExam);
+        exam.setName(Utility.EXAM);
+
+        categoriesList.add(exam);
+
+        Category dentistry = new Category();
+        Uri uriDentistry = Uri.parse(Utility.URI_PACKAGE + R.drawable.menu_0028_odontologia);
+        dentistry.setIcon(uriDentistry);
+        dentistry.setName(Utility.DENTISTRY);
+
+        categoriesList.add(dentistry);
+
         Category health = new Category();
         Uri uriHealth = Uri.parse(Utility.URI_PACKAGE + R.drawable.menu_0014_saude);
         health.setIcon(uriHealth);

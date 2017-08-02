@@ -180,6 +180,18 @@ public class PartnerCategoryActivity extends AppCompatActivity {
             actionBar.setDisplayHomeAsUpEnabled(true);
 
             switch (category) {
+                case Utility.EXAM:
+                    tvTitleActionBar.setText(getResources().getString(R.string.screen_exam));
+                    partner = mDatabase
+                            .child(Utility.EXAM)
+                            .orderByChild(FirebaseHelper.FIREBASE_DATABASE_ORDERBY);
+                    break;
+                case Utility.DENTISTRY:
+                    tvTitleActionBar.setText(getResources().getString(R.string.screen_dentistry));
+                    partner = mDatabase
+                            .child(Utility.DENTISTRY)
+                            .orderByChild(FirebaseHelper.FIREBASE_DATABASE_ORDERBY);
+                    break;
                 case Utility.HEALTH:
                     tvTitleActionBar.setText(getResources().getString(R.string.screen_health));
                     partner = mDatabase

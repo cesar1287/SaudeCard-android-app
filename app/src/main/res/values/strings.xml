@@ -58,4 +58,6 @@
 
     <string name="google_maps_api_key">AIzaSyBYVOQBESyzj7rJBVTd8dnE9yRIN0qk8bU</string>
     <string name="screen_favorite">Favorito</string>
+    <string name="screen_exam">Exames</string>
+    <string name="screen_dentistry">Odontologia</string>
 </resources>

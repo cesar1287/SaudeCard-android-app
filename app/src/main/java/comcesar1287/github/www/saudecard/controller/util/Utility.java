@@ -20,6 +20,8 @@ public class Utility {
     public static final String LINK_BE_PARTNER = "http://www.brasilcardfacil.com.br/modalidade-parceria.html";
 
     public static final String HEALTH = "saude";
+    public static final String DENTISTRY = "odontologia";
+    public static final String EXAM = "exame";
     public static final String ALIMENTATION = "alimentacao";
     public static final String ANIMAL = "animal";
     public static final String GRAPHIC_ART = "arte_grafica";
