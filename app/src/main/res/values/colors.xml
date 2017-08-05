@@ -5,6 +5,8 @@
     <color name="colorAccent">#FF4081</color>
     <color name="colorSubActionBar">#225a9a</color>
 
+    <color name="dialogBackground">@android:color/transparent</color>
+
     <color name="colorTextPartner">#194f82</color>
 
     <color name="white">#FFF</color>
