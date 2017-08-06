@@ -134,6 +134,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private Partner insertLabSaoLuiz() {
         Partner labSaoLuiz = new Partner();
+        labSaoLuiz.setCategory("exame");
         labSaoLuiz.setSubcategory("Exames Laboratoriais");
         labSaoLuiz.setFavorite(true);
         labSaoLuiz.setAddress("Rua Dr. Teixeira Soares, 433, Centro, Formiga - MG");
@@ -151,6 +152,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private Partner insertFunerariaAlianca() {
         Partner funerariaAlianca = new Partner();
+        funerariaAlianca.setCategory("comercio");
         funerariaAlianca.setSubcategory("Funerária");
         funerariaAlianca.setFavorite(true);
         funerariaAlianca.setAddress("Rua João Pedrosa, 43, Quinzinho, Formiga - MG");
@@ -168,6 +170,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private Partner insertPoupeMaisFarma() {
         Partner poupeMaisFarma = new Partner();
+        poupeMaisFarma.setCategory("saude");
         poupeMaisFarma.setSubcategory("Farmácia");
         poupeMaisFarma.setFavorite(true);
         poupeMaisFarma.setAddress("Praça Cristóvão Faria, 594, Centro, Formiga - MG");
@@ -184,6 +187,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private Partner insertDrogariasEconomize() {
         Partner drogariasEconomize = new Partner();
+        drogariasEconomize.setCategory("saude");
         drogariasEconomize.setSubcategory("Drogaria");
         drogariasEconomize.setFavorite(true);
         drogariasEconomize.setAddress("Rua Lassance Cunha, 492, Quinzinho, Formiga - MG");
@@ -218,20 +222,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         ibAccount = (ImageButton) findViewById(R.id.menu_account);
         ibAccount.setOnClickListener(this);
-
-        Category exam = new Category();
-        Uri uriExam = Uri.parse(Utility.URI_PACKAGE + R.drawable.menu_0029_exames);
-        exam.setIcon(uriExam);
-        exam.setName(Utility.EXAM);
-
-        categoriesList.add(exam);
-
-        Category dentistry = new Category();
-        Uri uriDentistry = Uri.parse(Utility.URI_PACKAGE + R.drawable.menu_0028_odontologia);
-        dentistry.setIcon(uriDentistry);
-        dentistry.setName(Utility.DENTISTRY);
-
-        categoriesList.add(dentistry);
 
         Category health = new Category();
         Uri uriHealth = Uri.parse(Utility.URI_PACKAGE + R.drawable.menu_0014_saude);
@@ -296,6 +286,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         categoriesList.add(education);
 
+        Category exam = new Category();
+        Uri uriExam = Uri.parse(Utility.URI_PACKAGE + R.drawable.menu_0029_exames);
+        exam.setIcon(uriExam);
+        exam.setName(Utility.EXAM);
+
+        categoriesList.add(exam);
+
         Category entertaiment = new Category();
         Uri uriEntertaiment = Uri.parse(Utility.URI_PACKAGE + R.drawable.menu_0027_laser);
         entertaiment.setIcon(uriEntertaiment);
@@ -316,6 +313,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         home.setName(Utility.HOME);
 
         categoriesList.add(home);
+
+        Category dentistry = new Category();
+        Uri uriDentistry = Uri.parse(Utility.URI_PACKAGE + R.drawable.menu_0028_odontologia);
+        dentistry.setIcon(uriDentistry);
+        dentistry.setName(Utility.DENTISTRY);
+
+        categoriesList.add(dentistry);
 
         Category tech = new Category();
         Uri uriTech = Uri.parse(Utility.URI_PACKAGE + R.drawable.menu_0020_tecnologia);

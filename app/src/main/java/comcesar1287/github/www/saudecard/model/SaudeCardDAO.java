@@ -16,7 +16,7 @@ import comcesar1287.github.www.saudecard.controller.firebase.FirebaseHelper;
 public class SaudeCardDAO extends SQLiteOpenHelper {
 
     private static final String DATABASE = "bd_saude_card";
-    private static final int VERSION = 2;
+    private static final int VERSION = 3;
     private static final String TABLE_FAVORITE = "favorite";
 
     public SaudeCardDAO(Context context) {
@@ -36,6 +36,7 @@ public class SaudeCardDAO extends SQLiteOpenHelper {
                 "phone TEXT, " +
                 "discount TEXT, " +
                 "category TEXT, " +
+                "subcategory TEXT, " +
                 "latitude REAL, " +
                 "longitude REAL, " +
                 "PRIMARY KEY (id_user, url_logo)" +
@@ -67,8 +68,9 @@ public class SaudeCardDAO extends SQLiteOpenHelper {
         cv.put(FirebaseHelper.FIREBASE_DATABASE_PARTNER_PHONE, partner.getPhone());
         cv.put(FirebaseHelper.FIREBASE_DATABASE_PARTNER_LATITUDE, partner.getLatitude());
         cv.put(FirebaseHelper.FIREBASE_DATABASE_PARTNER_LONGITUDE, partner.getLongitude());
-        cv.put("discount", partner.getDiscount());
-        cv.put("category", partner.getLongitude());
+        cv.put(FirebaseHelper.FIREBASE_DATABASE_PARTNER_DISCOUNT, partner.getDiscount());
+        cv.put(FirebaseHelper.FIREBASE_DATABASE_PARTNER_CATEGORY, partner.getCategory());
+        cv.put(FirebaseHelper.FIREBASE_DATABASE_PARTNER_SUBCATEGORY, partner.getSubcategory());
 
         getWritableDatabase().insert(TABLE_FAVORITE, null, cv);
     }
@@ -93,8 +95,9 @@ public class SaudeCardDAO extends SQLiteOpenHelper {
             partner.setPhone(cursor.getString(cursor.getColumnIndex(FirebaseHelper.FIREBASE_DATABASE_PARTNER_PHONE)));
             partner.setLatitude(cursor.getDouble(cursor.getColumnIndex(FirebaseHelper.FIREBASE_DATABASE_PARTNER_LATITUDE)));
             partner.setLongitude(cursor.getDouble(cursor.getColumnIndex(FirebaseHelper.FIREBASE_DATABASE_PARTNER_LONGITUDE)));
-            partner.setDiscount(cursor.getString(cursor.getColumnIndex("discount")));
-            partner.setCategory(cursor.getString(cursor.getColumnIndex("category")));
+            partner.setDiscount(cursor.getString(cursor.getColumnIndex(FirebaseHelper.FIREBASE_DATABASE_PARTNER_DISCOUNT)));
+            partner.setCategory(cursor.getString(cursor.getColumnIndex(FirebaseHelper.FIREBASE_DATABASE_PARTNER_CATEGORY)));
+            partner.setSubcategory(cursor.getString(cursor.getColumnIndex(FirebaseHelper.FIREBASE_DATABASE_PARTNER_SUBCATEGORY)));
             partner.setFavorite(true);
             partners.add(partner);
         }
