@@ -3,6 +3,7 @@
 
     <string name="facebook_app_id">272994829847278</string>
     <string name="fb_login_protocol_scheme">fb272994829847278</string>
+    <string name="google_maps_api_key">AIzaSyBYVOQBESyzj7rJBVTd8dnE9yRIN0qk8bU</string>
 
     <string name="error_failed_signin_email_exists">Falha ao entrar\n\nEsse e-mail já está sendo usado em nosso sistema e dispositivo.\nTente novamente com outro método de login.</string>
     <string name="error_google_play_services">Erro no Google Play Services.</string>
@@ -48,6 +49,10 @@
     <string name="screen_tech">Tecnologia</string>
     <string name="screen_selection_local">Selecione o local</string>
     <string name="screen_animal">Animal</string>
+    <string name="screen_favorite">Favorito</string>
+    <string name="screen_exam">Exames</string>
+    <string name="screen_dentistry">Odontologia</string>
+    <string name="screen_partners_nearby">Próximos</string>
 
     <string name="loading_partners_pls_wait">Carregando parceiros, por favor aguarde!!!</string>
 
@@ -56,8 +61,5 @@
 
     <string name="action_favorite">Favorito</string>
 
-    <string name="google_maps_api_key">AIzaSyBYVOQBESyzj7rJBVTd8dnE9yRIN0qk8bU</string>
-    <string name="screen_favorite">Favorito</string>
-    <string name="screen_exam">Exames</string>
-    <string name="screen_dentistry">Odontologia</string>
+    <string name="search_title">Buscar por tag</string>
 </resources>

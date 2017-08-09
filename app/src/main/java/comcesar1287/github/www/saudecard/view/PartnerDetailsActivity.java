@@ -98,6 +98,20 @@ public class PartnerDetailsActivity extends AppCompatActivity {
         banner = (ImageView) findViewById(R.id.partner_details_banner);
 
         switch (partner.getCategory()) {
+            case Utility.EXAM:
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    banner.setImageDrawable(getResources().getDrawable(R.drawable.banner_0010_exames, getApplicationContext().getTheme()));
+                } else {
+                    banner.setImageResource(R.drawable.banner_0010_exames);
+                }
+                break;
+            case Utility.DENTISTRY:
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    banner.setImageDrawable(getResources().getDrawable(R.drawable.banner_0009_odonto, getApplicationContext().getTheme()));
+                } else {
+                    banner.setImageResource(R.drawable.banner_0009_odonto);
+                }
+                break;
             case Utility.HEALTH:
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                     banner.setImageDrawable(getResources().getDrawable(R.drawable.banner_0015_saude, getApplicationContext().getTheme()));
