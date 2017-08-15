@@ -58,7 +58,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".view.PartnersNearbyActivity"
-            android:label="@string/screen_partners_nearby"
+            android:theme="@style/AppTheme.NoActionBar"
             android:parentActivityName=".view.MainActivity"
             android:screenOrientation="portrait" />
         <activity

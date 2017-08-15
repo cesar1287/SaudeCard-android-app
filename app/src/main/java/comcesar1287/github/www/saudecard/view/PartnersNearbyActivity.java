@@ -9,11 +9,14 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.SearchView;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -71,6 +74,11 @@ public class PartnersNearbyActivity extends AppCompatActivity implements Activit
 
         setContentView(R.layout.activity_partners_nearby);
 
+        Toolbar toolbar = (Toolbar) findViewById(R.id.nearby_toolbar);
+        setSupportActionBar(toolbar);
+
+        setupUI();
+
         DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
 
         partner = mDatabase.child(FirebaseHelper.FIREBASE_DATABASE_PARTNERS_LOCALIZATION);
@@ -78,6 +86,27 @@ public class PartnersNearbyActivity extends AppCompatActivity implements Activit
         dialog = ProgressDialog.show(this,"", this.getResources().getString(R.string.loading_partners_pls_wait), true, false);
 
         loadList();
+    }
+
+    private void setupUI() {
+
+        ActionBar actionBar = getSupportActionBar();
+
+        if(actionBar!=null) {
+
+            actionBar.setTitle("");
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
