@@ -20,6 +20,7 @@ import comcesar1287.github.www.saudecard.controller.domain.Offer;
 import comcesar1287.github.www.saudecard.controller.interfaces.RecyclerViewOnClickListenerHack;
 import comcesar1287.github.www.saudecard.controller.util.Utility;
 import comcesar1287.github.www.saudecard.view.OfferActivity;
+import comcesar1287.github.www.saudecard.view.OfferDetailsActivity;
 
 
 public class OfferFragment extends Fragment implements RecyclerViewOnClickListenerHack {
@@ -54,9 +55,9 @@ public class OfferFragment extends Fragment implements RecyclerViewOnClickListen
 
     @Override
     public void onClickListener(View view, int position) {
-        /*Intent intent = new Intent(getActivity(), OfferDetailsActivity.class);
+        Intent intent = new Intent(getActivity(), OfferDetailsActivity.class);
         intent.putExtra(Utility.KEY_CONTENT_EXTRA_OFFER, mList.get(position));
-        startActivity(intent);*/
+        startActivity(intent);
     }
 
     private static class RecyclerViewTouchListener implements RecyclerView.OnItemTouchListener {
