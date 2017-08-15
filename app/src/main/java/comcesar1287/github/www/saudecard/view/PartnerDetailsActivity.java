@@ -4,6 +4,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
@@ -39,10 +40,17 @@ public class PartnerDetailsActivity extends AppCompatActivity {
 
     ImageView banner;
 
+    TextView tvTitleToolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_partner_details);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.partner_details_toolbar);
+        setSupportActionBar(toolbar);
+
+        tvTitleToolbar = (TextView) findViewById(R.id.tv_title_action_bar);
 
         dao = new SaudeCardDAO(getApplicationContext());
         id_user = FirebaseAuth.getInstance().getCurrentUser().getUid();
@@ -80,8 +88,9 @@ public class PartnerDetailsActivity extends AppCompatActivity {
         }
 
         if(getSupportActionBar()!=null) {
-            getSupportActionBar().setTitle(partner.getName());
+            getSupportActionBar().setTitle("");
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            tvTitleToolbar.setText(partner.getName());
         }
 
         TextView tv_name = (TextView) findViewById(R.id.partner_details_name);

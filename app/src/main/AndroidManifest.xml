@@ -50,7 +50,8 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".view.PartnerDetailsActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".view.FavoriteActivity"
             android:screenOrientation="portrait"
