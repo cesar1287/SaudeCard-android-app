@@ -16,6 +16,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import comcesar1287.github.www.saudecard.R;
+import comcesar1287.github.www.saudecard.controller.domain.Offer;
 import comcesar1287.github.www.saudecard.controller.domain.Partner;
 import comcesar1287.github.www.saudecard.controller.util.Utility;
 
@@ -29,6 +30,8 @@ public class MapViewFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_map, container, false);
 
         final Partner partner = (Partner) getArguments().getSerializable(Utility.KEY_CONTENT_EXTRA_PARTNER);
+
+        final Offer offer = (Offer) getArguments().getSerializable(Utility.KEY_CONTENT_EXTRA_OFFER);
 
         mMapView = (MapView) rootView.findViewById(R.id.mapView);
         mMapView.onCreate(savedInstanceState);
@@ -58,6 +61,15 @@ public class MapViewFragment extends Fragment {
                     // For dropping a marker at a point on the Map
                     LatLng address = new LatLng(partner.getLatitude(), partner.getLongitude());
                     googleMap.addMarker(new MarkerOptions().position(address).title(partner.getName()).snippet(partner.getName()));
+
+
+                    // For zooming automatically to the location of the marker
+                    CameraPosition cameraPosition = new CameraPosition.Builder().target(address).zoom(16).build();
+                    googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+                }else if(offer!=null){
+                    // For dropping a marker at a point on the Map
+                    LatLng address = new LatLng(offer.getLatitude(), offer.getLongitude());
+                    googleMap.addMarker(new MarkerOptions().position(address).title(offer.getName()).snippet(offer.getName()));
 
 
                     // For zooming automatically to the location of the marker
