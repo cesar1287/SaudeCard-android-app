@@ -3,7 +3,10 @@ package comcesar1287.github.www.saudecard.view;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -39,6 +42,11 @@ public class OfferActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_offer);
 
+        Toolbar toolbar = (Toolbar) findViewById(R.id.offers_toolbar);
+        setSupportActionBar(toolbar);
+
+        setupUI();
+
         DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
 
         offer = mDatabase.child(FirebaseHelper.FIREBASE_DATABASE_OFFER).orderByChild(FirebaseHelper.FIREBASE_DATABASE_ORDERBY);
@@ -46,6 +54,27 @@ public class OfferActivity extends AppCompatActivity {
         dialog = ProgressDialog.show(this,"", this.getResources().getString(R.string.loading_offers_pls_wait), true, false);
 
         loadList();
+    }
+
+    private void setupUI() {
+
+        ActionBar actionBar = getSupportActionBar();
+
+        if(actionBar!=null) {
+
+            actionBar.setTitle("");
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override

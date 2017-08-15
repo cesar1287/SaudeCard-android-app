@@ -46,8 +46,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".view.OfferActivity"
-            android:label="@string/screen_offers"
-            android:parentActivityName=".view.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait" />
         <activity
             android:name=".view.PartnerDetailsActivity"
@@ -59,7 +58,6 @@
         <activity
             android:name=".view.PartnersNearbyActivity"
             android:theme="@style/AppTheme.NoActionBar"
-            android:parentActivityName=".view.MainActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".view.OfferDetailsActivity"
