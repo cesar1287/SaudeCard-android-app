@@ -18,7 +18,7 @@
         android:layout_marginEnd="10sp"
         android:layout_marginRight="10sp"/>
 
-    <TextView
+    <comcesar1287.github.www.saudecard.controller.custom_widgets.MyCustomTextView
         android:id="@+id/offer_name"
         android:textColor="@color/black"
         android:layout_below="@+id/offer_logo"

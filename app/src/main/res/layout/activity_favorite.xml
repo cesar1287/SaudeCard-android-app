@@ -13,7 +13,7 @@
         android:background="@color/colorPrimary"
         app:theme="@style/ToolbarColoredBackArrow">
 
-        <TextView
+        <comcesar1287.github.www.saudecard.controller.custom_widgets.MyCustomTextView
             android:id="@+id/tv_title_action_bar"
             style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
             android:text="@string/screen_favorite"

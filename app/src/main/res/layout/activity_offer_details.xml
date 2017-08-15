@@ -19,7 +19,7 @@
             android:adjustViewBounds="true"
             android:layout_marginTop="4sp"/>
 
-        <TextView
+        <comcesar1287.github.www.saudecard.controller.custom_widgets.MyCustomTextView
             android:textColor="@color/black"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:id="@+id/offer_details_name"
@@ -30,7 +30,7 @@
             android:layout_centerHorizontal="true"
             />
 
-        <TextView
+        <comcesar1287.github.www.saudecard.controller.custom_widgets.MyCustomTextView
             android:textColor="@color/black"
             android:id="@+id/offer_details_description"
             android:layout_width="wrap_content"
@@ -43,7 +43,7 @@
             android:paddingRight="30sp"
             android:paddingEnd="30sp"/>
 
-        <TextView
+        <comcesar1287.github.www.saudecard.controller.custom_widgets.MyCustomTextView
             android:textColor="@color/black"
             android:id="@+id/offer_details_about"
             android:layout_width="wrap_content"
@@ -57,7 +57,7 @@
             android:paddingRight="30sp"
             android:paddingEnd="30sp"/>
 
-        <TextView
+        <comcesar1287.github.www.saudecard.controller.custom_widgets.MyCustomTextView
             android:textColor="@color/black"
             android:id="@+id/offer_details_address"
             android:layout_width="wrap_content"
@@ -79,7 +79,7 @@
 
         </RelativeLayout>
 
-        <TextView
+        <comcesar1287.github.www.saudecard.controller.custom_widgets.MyCustomTextView
             android:textColor="@color/black"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:id="@+id/offer_details_phone"
@@ -93,7 +93,7 @@
             android:paddingRight="30sp"
             android:paddingEnd="30sp"/>
 
-        <TextView
+        <comcesar1287.github.www.saudecard.controller.custom_widgets.MyCustomTextView
             android:textColor="@color/black"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:id="@+id/offer_details_site"

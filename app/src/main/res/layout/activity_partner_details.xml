@@ -19,7 +19,7 @@
             android:scaleType="fitStart"
             android:adjustViewBounds="true"/>
 
-        <TextView
+        <comcesar1287.github.www.saudecard.controller.custom_widgets.MyCustomTextView
             android:textColor="@color/colorTextPartner"
             android:textStyle="bold"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -30,7 +30,7 @@
             android:layout_marginTop="20sp"
             android:layout_centerHorizontal="true" />
 
-        <TextView
+        <comcesar1287.github.www.saudecard.controller.custom_widgets.MyCustomTextView
             android:textColor="@color/colorTextPartner"
             android:id="@+id/partner_details_description"
             android:layout_width="wrap_content"
@@ -44,7 +44,7 @@
             android:paddingRight="30sp"
             android:paddingEnd="30sp"/>
 
-        <TextView
+        <comcesar1287.github.www.saudecard.controller.custom_widgets.MyCustomTextView
             android:textColor="@color/colorTextPartner"
             android:id="@+id/partner_details_address"
             android:layout_width="wrap_content"
@@ -66,7 +66,7 @@
 
         </RelativeLayout>
 
-        <TextView
+        <comcesar1287.github.www.saudecard.controller.custom_widgets.MyCustomTextView
             android:textColor="@color/colorTextPartner"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:id="@+id/partner_details_phone"
@@ -80,7 +80,7 @@
             android:paddingRight="30sp"
             android:paddingEnd="30sp"/>
 
-        <TextView
+        <comcesar1287.github.www.saudecard.controller.custom_widgets.MyCustomTextView
             android:textColor="@color/colorTextPartner"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:id="@+id/partner_details_site"

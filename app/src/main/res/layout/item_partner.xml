@@ -33,7 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <TextView
+            <comcesar1287.github.www.saudecard.controller.custom_widgets.MyCustomTextView
                 android:id="@+id/partner_name"
                 android:text="nome empresa"
                 android:layout_width="wrap_content"
@@ -43,7 +43,7 @@
                 android:textColor="@color/colorTextPartner"
                 android:textSize="14sp"/>
 
-            <TextView
+            <comcesar1287.github.www.saudecard.controller.custom_widgets.MyCustomTextView
                 android:id="@+id/partner_address"
                 android:text="endereçooooooo..."
                 android:layout_width="wrap_content"
@@ -52,7 +52,7 @@
                 android:textColor="@color/colorTextPartner"
                 android:textSize="13sp"/>
 
-            <TextView
+            <comcesar1287.github.www.saudecard.controller.custom_widgets.MyCustomTextView
                 android:id="@+id/partner_segment"
                 android:text="segmento"
                 android:layout_width="wrap_content"
@@ -84,7 +84,7 @@
                 android:layout_above="@id/partner_segment"
                 android:visibility="gone"/>
 
-            <TextView
+            <comcesar1287.github.www.saudecard.controller.custom_widgets.MyCustomTextView
                 android:id="@+id/partner_discount"
                 android:text="10%"
                 android:textColor="@color/white"
