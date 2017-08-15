@@ -19,6 +19,7 @@
     <string name="error_user_password_incorrect">Usuário e/ou senha incorreto(s).</string>
     <string name="error_invalid_cpf">CPF inválido, verifique e insira novamente por favor</string>
     <string name="error_loading_partners">Algo deu errado ao carregar os parceiros, por favor contate o administrador.</string>
+    <string name="error_loading_offers">Algo deu errado ao carregar as ofertas, por favor contate o administrador.</string>
 
     <string name="user_created_successfully">Usuário criado com sucesso.</string>
 
@@ -53,7 +54,9 @@
     <string name="screen_exam">Exames</string>
     <string name="screen_dentistry">Odontologia</string>
     <string name="screen_partners_nearby">Próximos</string>
+    <string name="screen_offers">Ofertas</string>
 
+    <string name="loading_offers_pls_wait">Carregando ofertas, por favor aguarde!!!</string>
     <string name="loading_partners_pls_wait">Carregando parceiros, por favor aguarde!!!</string>
 
     <string name="message_partner_added_favorities">Parceiro adicionado aos favoritos</string>

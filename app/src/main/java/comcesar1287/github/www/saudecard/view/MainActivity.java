@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(this, PartnersNearbyActivity.class));
                 break;
             case R.id.menu_flame:
-                showDisabledFeatureAlert();
+                startActivity(new Intent(MainActivity.this, OfferActivity.class));
                 break;
             case R.id.menu_account:
                 showDisabledFeatureAlert();

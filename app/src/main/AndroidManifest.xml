@@ -45,6 +45,11 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
+            android:name=".view.OfferActivity"
+            android:label="@string/screen_offers"
+            android:parentActivityName=".view.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".view.PartnerDetailsActivity"
             android:screenOrientation="portrait" />
         <activity
